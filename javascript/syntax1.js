@@ -77,7 +77,23 @@
     //Determine index of item
     console.log(Animals.indexOf("Cat"));
     Animals.splice(1,3); //remove item (start,number of items)
-    console.log(Animals);   
+    console.log(Animals);  
+    
+    // 2D Array
+    const array = [
+        ["A", "B", "C"],
+        ["D", "E", "F"],
+        ["G", "H", "I"]
+    ]
+
+    let elements = "";
+
+    for(let i = 0; i < array.length; i++) {
+        for(let j = 0; j < array[i].length; j++) {
+            elements += array[i][j];
+        }
+        document.getElementById("myArray").innerHTML = elements += "<br>";
+    }
 
 //Advanced Concepts
 //Object Literals
