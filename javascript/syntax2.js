@@ -70,3 +70,6 @@ console.log(person2.getFullName());
 
 //timeout function
 //setTimeout(() => document.querySelector(".error").remove(), 3000); need two param (function, millisecond)
+
+// Ternary Operator
+    // condition ? expIfTrue : expIfFalse

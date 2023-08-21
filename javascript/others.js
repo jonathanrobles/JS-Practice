@@ -23,3 +23,15 @@
     // const - used for Objects, Arrays, Functions, and Regular Expressions
 
     // Operator Precedence - PEMDAS
+
+//Spread Operator
+    // allows an iterable such as an array or string  to be expanded in places where 
+    // zero  or more arguments  are expected (unpack elements)
+    // ...
+    // for arguments
+
+//Rest Parameter
+    // represents indefinite number of paramaters 
+    // (pack arguments in an array)
+    // ...
+    // for parameters
