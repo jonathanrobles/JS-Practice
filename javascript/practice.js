@@ -1,9 +1,7 @@
-//How to reverse a string
+// How to reverse a string
 var myName = "Jonathan";
 
 const reversed = reverseName(myName);
-
-//console.log(reversed);
 
     function reverseName(personName) {
         let reversed = "";
@@ -12,6 +10,8 @@ const reversed = reverseName(myName);
         }
         return reversed;
     }   
+
+    // console.log(reversed);
 
 // Determine if a String is a palindrome
 let sampleName = "level";
@@ -25,10 +25,10 @@ let sampleName = "level";
         }
 
         if(reversed == sampleString) {
-            //console.log(`The string ${sampleString} is a palindrome`);
+            // console.log(`The string ${sampleString} is a palindrome`);
             return reversed;
         } else {
-            //console.log("It is just a regular String")
+            // console.log("It is just a regular String")
             return reversed;
         }
     }
@@ -36,12 +36,12 @@ let sampleName = "level";
 // Calculate the number of numerical digits in a String
 const randomString = "Abc";
 
-    //console.log(checkNum(randomString));
-
     function checkNum(randString) {
         const numDigits = randString.match(/[0-9]/g);
         return numDigits ? numDigits.length : 0
     }
+
+    // console.log(checkNum(randomString));
 
 // Find the count for the occurrence of a particular character in a string
 const sampleStr = "Hello World12345!";
@@ -50,19 +50,15 @@ const char = /o./g
 
 const charOccur = new RegExp(char, "g");
 
-    //console.log(numOccur(sampleStr, charOccur));
-
     function numOccur(str, char) {
         const occured = str.match(char);
         return occured ? occured.length : 0;
     } 
 
+    // console.log(numOccur(sampleStr, charOccur));
+
 // Find the non-matching characters in a string - not working - exclude pa need
 const pattern = /[0-9]/g;
-
-    const result = exclude(sampleStr, pattern);
-
-    console.log(result);
 
     function exclude(str, pattern) {
         const nonMatch = str.match(pattern);
@@ -74,6 +70,10 @@ const pattern = /[0-9]/g;
             console.log("No integers found")
         }
     }
+
+    const result = exclude(sampleStr, pattern);
+    // console.log(result);
+
 // Find out if the given strings are anagram
 
 // Calculate the number of vowels and consonants in a String
@@ -95,15 +95,12 @@ var myName = "rr";
 
     }
 
-    console.log(checkStr(myName));    
-
+    // console.log(checkStr(myName));    
 
 // Total of matching integer elements in an array
 const numArray = [1, 2, 4, 3, 2, 2, 2, 2, 5];
 
 const numMatch = 5;
-
-    //console.log(checkMatch(numArray, numMatch));
 
     function checkMatch(arrayNum, matchNum) {
 
@@ -114,6 +111,8 @@ const numMatch = 5;
         }
         return count;
     }
+
+    //console.log(checkMatch(numArray, numMatch));
 
 // Reverse an array
 const array1 = ["Table", "Chair", "Glass", "Charger", "Mouse"];
@@ -160,8 +159,6 @@ let sum = x + y;
     //console.log(sum);
 
 // Average of numbers in a list
-    console.log(addAllInt(array2));
-
     function addAllInt(array) {
         let sum = 0;
         let average = 0;
@@ -173,10 +170,10 @@ let sum = x + y;
         return [sum, Math.round(average)];
     }
 
+    // console.log(addAllInt(array2));
+
 // Check if integer is odd or even
 let z = 11;
-
-    //checkInteger(z);
 
     function checkInteger(number) {
         if(number % 2 == 0) {
@@ -185,13 +182,76 @@ let z = 11;
             console.log(`${number} is an odd number`);
         }
     }
+
+    //checkInteger(z);
     
 // Find middle of a linked list
+class Node {
+    constructor(item) {
+        this.item = item;
+        this.next = null;
+    }
+}
+
+class LinkedList {
+    constructor() {
+        this.head = null;
+    }
+
+    insert(item) {
+        const newItem = new Node(item);
+        if(!this.head) {
+            this.head = newItem;
+            return;
+        }
+        
+        let current = this.head; // start
+        while(current.next){
+            current = current.next;
+        }
+        current.next = newItem;
+    }
+
+    searchMiddle() {
+        if(!this.head) {
+            return null;
+        }
+
+        let slow = this.head;
+        let fast = this.head;
+
+        while(fast && fast.next) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow.item;
+    }
+
+    display() {
+        let current = this.head; // start
+        while(current) {
+            console.log(current.item);
+            current = current.next;
+        }
+    }
+}
+
+const linkedArray = [1, 2, 3, 4, 5];
+
+const linkedList = new LinkedList();
+
+    for(let item of linkedArray) {
+        linkedList.insert(item);
+    }
+    console.log(linkedList.searchMiddle());
+    linkedList.display();
 
 // Remove loop in a linked list
 
-// merge two sorted linked list
+// merge two sorted linked list 
 
 // Binary Search in a sorted array
 
 // Binary Tree Reversal
+
